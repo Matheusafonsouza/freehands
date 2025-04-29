@@ -1,0 +1,51 @@
+---
+const products = [
+  {
+    step: '01',
+    name: 'Rifle',
+    description:
+      'Step into the action with our VR Automatic Rifle — engineered for intense shooting games on Meta Quest. With realistic weight, tactile feedback, and ergonomic design, every burst feels powerful and precise.',
+    src: '/assets/rifle.webp',  
+  },
+  {
+    step: '02',
+    name: 'Gun',
+    description:
+      'Dominate the battlefield with our VR Gun — crafted for precision, comfort, and immersion. Designed for Meta Quest, it gives you the feel of a real weapon, complete with responsive triggers and ergonomic grip.',
+    src: '/assets/gun.webp',  
+  },
+  {
+    step: '03',
+    name: 'Platform',
+    description:
+      'Break boundaries with our VR Treadmill — a next-gen locomotion platform that lets you walk, run, and strafe naturally in your favorite VR games. Built for full 360° movement, it’s your key to deeper immersion and total in-game freedom.',
+    src: '/assets/platform.webp',  
+  },
+];
+---
+
+<section class="py-16 sm:py-20">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl">Products</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          products.map((product) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <div class="flex flex-col gap-4">
+                <h3 class="text-xl font-medium">{product.name}</h3>
+                <p class="text-primary-950/70 dark:text-primary-200/70 text-base sm:text-lg">
+                  {product.description}
+                </p>
+                <img
+                  class="h-[200px] w-full rounded-3xl"
+                  src={product.src}
+                />
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
