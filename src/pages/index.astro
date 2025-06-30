@@ -1,22 +1,77 @@
 ---
-import About from '../components/home/About.astro';
-import Support from '../components/home/Support.astro';
-import Cta from '../components/home/Cta.astro';
-import Expertise from '../components/home/Expertise.astro';
-import Hero from '../components/home/Hero.astro';
-import Services from '../components/home/Services.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/layout/Header.astro";
+import Footer from "../components/layout/Footer.astro";
 ---
 
-<Layout
-  description="Experience true freedom in VR. Our design keeps your hands unbound, letting you grab, reload, and interact naturally — just like in real life. No straps, no limits — just seamless gameplay and full immersion."
-  title="Free Hands"
->
-  <Hero />
-  <Services />
-  <Expertise />
-  <About />
-  <Support />
-  <!-- <Testimonials /> -->
-  <Cta />
+<Layout title="Freehands - Redefine Your Immersion.">
+  <main class="bg-black text-white">
+    <section class="text-center py-20 px-4 fade-in">
+      <h1 class="text-5xl md:text-7xl font-bold mb-4">
+        Redefine Your Immersion.
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+        With Freehands peripherals, your Meta Quest controllers transform into a
+        true extension of your body. Feel every action, aim with natural
+        precision, and dominate the virtual battlefield.
+      </p>
+    </section>
+
+    <section id="products" class="py-20 px-4 fade-in">
+      <div class="max-w-6xl mx-auto">
+        <img
+          src="/public/assets/banner.svg"
+          alt="Three Freehands peripheral models: a pistol, a submachine gun, and a shotgun."
+        />
+        <p class="text-center mt-6 text-gray-400">
+          Pistol, Submachine Gun, or Shotgun. Choose your weapon and feel the
+          difference that tactical precision makes.
+        </p>
+      </div>
+    </section>
+
+    <section id="tecnologia" class="py-20 px-4 bg-gray-900 fade-in">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center"
+      >
+        <div>
+          <img
+            src="/public/assets/pistol-product.jpeg"
+            alt="Freehands pistol peripheral with a Meta Quest controller seamlessly integrated."
+            class="rounded-lg shadow-xl"
+          />
+        </div>
+        <div>
+          <h3 class="text-4xl font-bold mb-4">Intuitive Haptic Technology</h3>
+          <p class="text-gray-300 mb-4">
+            Our patented engineering allows the Meta Quest controller to
+            integrate flawlessly with the peripheral. Internal sensors capture
+            your hand movements directly on the weapon, eliminating any delay
+            and providing true 1:1 response.
+          </p>
+          <ul class="list-disc list-inside space-y-2 text-gray-300">
+              <span class="font-bold text-white">Seamless Integration:</span> Just
+              snap in your controller and you're ready to play.
+              <br />
+              <span class="font-bold text-white">Precision Tracking:</span> Every
+              move your hand makes becomes an in-game command.
+              <br />
+              <span class="font-bold text-white">Robust Build:</span> Crafted to
+              endure the most intense gaming sessions.
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="py-20 px-4 text-center fade-in">
+      <h2 class="text-4xl font-bold mb-4">Born from an Obsession with Immersion</h2>
+      <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+        Freehands is an American startup founded by gamers, for gamers. We were
+        tired of the immersion break that comes from using floating
+        controllers. So, we built the ultimate solution for anyone who takes VR
+        shooting games seriously. Our mission is to erase the line between the
+        player and the game.
+      </p>
+    </section>
+  </main>
 </Layout>
